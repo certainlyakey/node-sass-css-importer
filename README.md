@@ -9,7 +9,7 @@ import a file with a CSS extension. To work around this, you must use a
 special prefix on the import string and omit the extension.
 
 ```scss
-@import "CSS:some_folder/some_css_file"
+@import "!some_folder/some_css_file"
 ```
 
 ## Installation

@@ -8,7 +8,7 @@ module.exports = function(options) {
     , import_paths_len;
 
   return function(url, prev, done) {
-    if (url.slice(0, 4) !== 'CSS:') {
+    if (url.slice(0, 1) !== '!') {
       return done();
     }
 
@@ -22,7 +22,7 @@ module.exports = function(options) {
       return done();
     }
 
-    var css_path = url.slice(4) + '.css'
+    var css_path = url.slice(1) + '.css'
       , css_filepath, i = 0, import_path;
 
     for (; i < import_paths_len; ++i) {
